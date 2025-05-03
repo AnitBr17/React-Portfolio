@@ -1,14 +1,22 @@
 import React from "react";
 import RevealOnScroll from "../RevealOnScroll";
+// import {
+//   FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDatabase,
+// } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from 'react-icons/fa';
+import {
+  SiMongodb, SiFirebase, SiCplusplus, SiPython, SiTypescript,
+  SiTailwindcss,
+} from 'react-icons/si';
 
 const About = () => {
-  const frontendSkills = ["React", "TypeScript", "TailwindCSS", "Redux"];
-  const backendSkills = ["JavaScript", "Firebase"];
+  const frontendSkills = ["HTML", "CSS", "JavaScript", "React.js", "TypeScript", "TailwindCSS", "Redux"];
+  const backendSkills = ["Node.js", "MondoDB", "Firebase"];
 
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center py-20"
+      className="min-h-[60vh] flex items-center justify-center py-5"
     >
       <RevealOnScroll>
         <div className="max-w-3xl mx-auto px-4">
@@ -52,8 +60,30 @@ const About = () => {
                 </div>
               </div>
             </div>
+            <div className="flex justify-evenly flex-wrap gap-6 text-5xl text-gray-700">
+              {/* <FaHtml5 className="hover:text-orange-600 transition" title="HTML5" />
+              <FaCss3Alt className="hover:text-blue-600 transition" title="CSS3" />
+              <FaJs className="hover:text-yellow-500 transition" title="JavaScript" />
+              <FaReact className="hover:text-blue-400 transition" title="React" />
+              <FaNodeJs className="hover:text-green-600 transition" title="Node.js" /> */}
+              <FaHtml5 className="text-5xl text-orange-400 hover:animate-bounce" title="HTML5" />
+              <FaCss3Alt className="text-5xl text-blue-400 hover:animate-bounce" title="CSS3" />
+              {/* <FaJs className="text-5xl text-yellow-400 hover:animate-pulse" title="JavaScript" /> */}
+              <FaJs className="text-5xl text-yellow-400 hover:animate-bounce" title="JavaScript" />
+              <FaReact className="text-5xl text-cyan-400 hover:animate-bounce" title="React" />
+              {/* <FaReact className="text-5xl text-green-600 hover:drop-shadow-lg hover:text-white hover:bg-green-600 p-2 rounded transition duration-300" title="React" /> */}
+              <FaNodeJs className="text-5xl text-green-400 hover:animate-bounce" title="Node.js" />
+              <SiFirebase className="text-5xl text-yellow-400 hover:animate-bounce" title="Firebase" />
+              <SiTypescript className="text-5xl text-blue-400 hover:animate-bounce" title="Typescript" />
+              <SiMongodb className="text-5xl text-green-400 hover:animate-bounce" title="MongoDB" />
+              <SiTailwindcss className="text-5xl text-sky-400 hover:animate-bounce" title="Tailwindcss " />
+              {/* <SiPython
+                className="text-5xl text-yellow-400 hover:animate-bounce"
+                title="Python"
+              /> */}
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
             <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
               <h3 className="text-xl font-bold mb-4"> 🏫 Education </h3>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
@@ -67,7 +97,7 @@ const About = () => {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
         </div>
       </RevealOnScroll>
     </section>

@@ -8,7 +8,7 @@ const Home = () => {
   const [showCursor, setShowCursor] = useState(true);
   const roles = useRef([
     "a Full-Stack Developer",
-    "a Frontend Specialist",
+    "a Frontend Developer",
     "a UI/UX Designer",
     "a Web Enthusiast",
   ]);
@@ -56,14 +56,14 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative"
+      className="min-h-[80vh] flex items-center justify-center relative"
     >
       <RevealOnScroll>
         <div className="text-center z-10 px-4">
           <div className="h-28 md:h-36 flex items-center justify-center mb-6">
             <div>
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Hi,I'm Shivam Thakre
+                Hi, I'm Anit Baranwal
               </h1>
               <h5 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
                 {displayText}

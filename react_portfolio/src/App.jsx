@@ -8,6 +8,7 @@ import Projects from "./components/sections/Projects";
 import "./index.css";
 import "./App.css";
 import Contact from "./components/sections/Contact";
+import Footer from "./components/sections/Footer";
 const App = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,6 +26,7 @@ const App = () => {
         <About />
         <Projects />
         <Contact />
+        <Footer />
       </div>
     </div>
   );
