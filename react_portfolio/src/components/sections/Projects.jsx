@@ -17,7 +17,7 @@ const Projects = () => {
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
             Featured Projects
           </h2>
-          
+
           {/* Card Layout - First Row
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
            
@@ -180,8 +180,128 @@ const Projects = () => {
               </div>
             </div>
           </div> */}
-          
-          
+
+
+          <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition w-full mb-6">
+            <div className="flex flex-col md:flex-row gap-6">
+              {/* Left side image */}
+              <div className="w-full md:w-1/2">
+                <img
+                  src={Portfolio1}
+                  alt="Portfolio"
+                  className="rounded-lg w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Right side content */}
+              <div className="w-full md:w-1/2 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">
+                    Moneycontrol – Financial News & Market Tracker
+                  </h3>
+                  <p className="text-gray-400 mb-4 text-sm">
+                    Designed and developed a fully responsive portfolio website using React.js and Tailwind CSS to showcase projects,
+                    technical skills, and achievements. Utilized component-based architecture for clean and maintainable code.
+                    Leveraged Tailwind CSS utility classes for rapid UI development and consistent styling across devices.
+                    Integrated smooth navigation, animations, and interactive elements to enhance the user experience.
+                  </p>
+                </div>
+
+                {/* Tech stack tags */}
+                <div className="flex flex-wrap justify-center text-center gap-6 mb-4">
+                  {["HTML", "CSS", "JavaScript"].map((tech, key) => (
+                    <span
+                      key={key}
+                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Links */}
+                <div className="flex flex-wrap justify-center text-center gap-6 mb-4">
+                  <a
+                    href="https://moneycontroll-clone.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                  >
+                    View Project →
+                  </a>
+                  <a
+                    href="https://github.com/Nitheesh23/B42_WEB_012_Dev-Designers"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                  >
+                    View Github →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition w-full mb-6">
+            <div className="flex flex-col md:flex-row gap-6">
+              {/* Left side image */}
+              <div className="w-full md:w-1/2">
+                <img
+                  src={Portfolio2}
+                  alt="Portfolio"
+                  className="rounded-lg w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Right side content */}
+              <div className="w-full md:w-1/2 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">
+                    UrbanNights - Hotel Booking Application
+                  </h3>
+                  <p className="text-gray-400 mb-4 text-sm">
+                    Designed and developed a fully responsive hotel booking application using React.js and Tailwind CSS.
+                    Created an intuitive user interface for browsing hotels, viewing details, and making reservations.
+                    Implemented responsive design principles for optimal viewing across devices.
+                    Integrated interactive features to enhance the user experience and streamline the booking process.
+                  </p>
+                </div>
+
+                {/* Tech stack tags */}
+                <div className="flex flex-wrap justify-center text-center gap-6 mb-4">
+                  {["React", "Tailwind CSS", "JavaScript", "Firebase"].map((tech, key) => (
+                    <span
+                      key={key}
+                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Links */}
+                <div className="flex flex-wrap justify-center text-center gap-6 mb-4">
+                  <a
+                    href="https://urban-nights.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                  >
+                    View Project →
+                  </a>
+                  <a
+                    href="https://github.com/AnitBr17/UrbanNights"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                  >
+                    View Github →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition w-full mb-6">
             <div className="flex flex-col md:flex-row gap-6">
               {/* Left side image */}
@@ -200,10 +320,14 @@ const Projects = () => {
                     Portfolio Website
                   </h3>
                   <p className="text-gray-400 mb-4 text-sm">
-                    Designed and developed a fully responsive portfolio website using React.js and Tailwind CSS to showcase projects,
-                    technical skills, and achievements. Utilized component-based architecture for clean and maintainable code.
-                    Leveraged Tailwind CSS utility classes for rapid UI development and consistent styling across devices.
-                    Integrated smooth navigation, animations, and interactive elements to enhance the user experience.
+                    Tech Stack: React.js, Tailwind CSS
+                    UrbanNights is a responsive travel booking web application that enables users to book hotels, apartments, and holiday packages with ease.
+                    Key Features:
+                    🔍 Destination Search to find stays based on location
+                    🧭 Filter Options like price, ratings, and property type
+                    📅 Booking Flow from browsing to final confirmation
+                    📱 Fully Responsive Design optimized for all screen sizes
+                    Built with React.js for a modular, dynamic UI and Tailwind CSS for rapid, consistent styling.
                   </p>
                 </div>
 
@@ -222,7 +346,7 @@ const Projects = () => {
                 {/* Links */}
                 <div className="flex flex-wrap justify-center text-center gap-6 mb-4">
                   <a
-                    href="https://shivamthakreportfolio.netlify.app/"
+                    href="https://anitbaranwal.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:text-blue-300 transition-colors"
@@ -230,7 +354,7 @@ const Projects = () => {
                     View Project →
                   </a>
                   <a
-                    href="https://github.com/yourusername/portfolio-website"
+                    href="https://github.com/AnitBr17/React-Portfolio"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:text-blue-300 transition-colors"
@@ -241,6 +365,127 @@ const Projects = () => {
               </div>
             </div>
           </div>
+
+          <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition w-full mb-6">
+            <div className="flex flex-col md:flex-row gap-6">
+              {/* Left side image */}
+              <div className="w-full md:w-1/2">
+                <img
+                  src={Portfolio4}
+                  alt="Portfolio"
+                  className="rounded-lg w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Right side content */}
+              <div className="w-full md:w-1/2 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">
+                    Mercury.Demo - Web Banking Application Clone
+                  </h3>
+                  <p className="text-gray-400 mb-4 text-sm">
+                    Designed and developed a fully responsive portfolio website using React.js and Tailwind CSS to showcase projects,
+                    technical skills, and achievements. Utilized component-based architecture for clean and maintainable code.
+                    Leveraged Tailwind CSS utility classes for rapid UI development and consistent styling across devices.
+                    Integrated smooth navigation, animations, and interactive elements to enhance the user experience.
+                  </p>
+                </div>
+
+                {/* Tech stack tags */}
+                <div className="flex flex-wrap justify-center text-center gap-6 mb-4">
+                  {["HTML", "CSS", "JavaScript"].map((tech, key) => (
+                    <span
+                      key={key}
+                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Links */}
+                <div className="flex flex-wrap justify-center text-center gap-6 mb-4">
+                  <a
+                    href="https://mercurydemo-clone.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                  >
+                    View Project →
+                  </a>
+                  <a
+                    href="https://github.com/irsuhail/B41_WEB_019_The-stylists/tree/main/WorkAnit"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                  >
+                    View Github →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition w-full mb-6">
+            <div className="flex flex-col md:flex-row gap-6">
+              {/* Left side image */}
+              <div className="w-full md:w-1/2">
+                <img
+                  src={Portfolio5}
+                  alt="Portfolio"
+                  className="rounded-lg w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Right side content */}
+              <div className="w-full md:w-1/2 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">
+                    TicTacToe Game
+                  </h3>
+                  <p className="text-gray-400 mb-4 text-sm">
+                    Built an interactive two-player Tic Tac Toe game using HTML, CSS, and JavaScript.
+                    Integrated real-time DOM manipulation with dynamic win/draw logic. Delivered a clean, user-friendly interface
+                    while sharpening debugging skills. Implemented dynamic game logic to handle win, loss, and draw conditions.
+                  </p>
+                </div>
+
+                {/* Tech stack tags */}
+                <div className="flex flex-wrap justify-center text-center gap-6 mb-4">
+                  {["HTML", "CSS", "JavaScript"].map((tech, key) => (
+                    <span
+                      key={key}
+                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Links */}
+                <div className="flex flex-wrap justify-center text-center gap-6 mb-4">
+                  <a
+                    href="https://tictactoe-game-anit.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                  >
+                    View Project →
+                  </a>
+                  <a
+                    href="https://github.com/AnitBr17/Tic-Tac-Toe-Game"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                  >
+                    View Github →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </RevealOnScroll>
     </section>
