@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 import RevealOnScroll from "../RevealOnScroll";
-import emailjs from "emailjs-com";
 import {
   FaGithub,
   FaLinkedin,
-  FaTwitter,
-  FaFacebook,
   FaEnvelope,
-  FaDiscord,
   FaPhoneAlt,
 } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
@@ -19,27 +15,37 @@ const Contact = () => {
     number: "",
     message: "",
   });
+  const [messageStatus, setMessageStatus] = useState("");
 
-  const SERVICE_ID = "service_x1pfyif";
-  const TEMPLATE_ID = "template_6uuhk4u";
-  const PUBLIC_KEY = "XhyI-M893aukeHBZB";
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbzY_kgmrP4TppQcZS1a1KphkRvbySSkbtlIprhvjC3QTz5vNrsJB_OTiR6kDOfQe2IQ/exec";
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
+    const form = e.target;
+    const formDataObj = new FormData(form);
+
+    fetch(scriptURL, {
+      method: "POST",
+      body: formDataObj,
+    })
       .then(() => {
-        alert("Message Sent!");
-        setFormData({ name: "", email: "", message: "" });
+        setMessageStatus("Message sent successfully!");
+        setTimeout(() => setMessageStatus(""), 2000);
+        setFormData({ name: "", email: "", number: "", message: "" });
+        form.reset();
       })
-      .catch(() => alert("Oops! Something went wrong. Please try again."));
+      .catch((error) => {
+        setMessageStatus("Error! Please try again later.");
+        console.error("Error!", error.message);
+      });
   };
 
   const socialLinks = [
     {
       icon: <FaEnvelope className="text-2xl" />,
       label: "Email",
-      url: "https://mail.google.com/mail/u/0/#inbox",
+      url: "mailto:anitbaranwal2018@gmail.com",
       color: "hover:text-red-400",
     },
     {
@@ -54,33 +60,15 @@ const Contact = () => {
       url: "https://www.linkedin.com/in/anit-baranwal/",
       color: "hover:text-blue-500",
     },
-    // {
-    //   icon: <FaTwitter className="text-2xl" />,
-    //   label: "Twitter",
-    //   url: "https://twitter.com/yourhandle",
-    //   color: "hover:text-sky-400",
-    // },
-    // {
-    //   icon: <FaFacebook className="text-2xl" />,
-    //   label: "Facebook",
-    //   url: "https://facebook.com/yourprofile",
-    //   color: "hover:text-blue-600",
-    // },
     {
       icon: <SiLeetcode className="text-2xl" />,
       label: "LeetCode",
       url: "https://leetcode.com/u/anitbaranwal2018/",
       color: "hover:text-orange-400",
     },
-    // {
-    //   icon: <FaDiscord className="text-2xl" />,
-    //   label: "Discord",
-    //   url: "https://discord.com/users/yourid",
-    //   color: "hover:text-indigo-500",
-    // },
     {
       icon: <FaPhoneAlt className="text-2xl" />,
-      label: 9621625386,
+      label: "9621625386",
       url: "tel:+919621625386",
       color: "hover:text-indigo-400",
     },
@@ -125,66 +113,63 @@ const Contact = () => {
             <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
               Send Me a Message
             </h2>
-            <form className="space-y-6" onSubmit={handleSubmit}>
-              <div className="relative">
+            <form
+              className="space-y-6"
+              onSubmit={handleSubmit}
+              name="submit-to-google-sheet"
+            >
+              <div>
                 <input
                   type="text"
-                  id="name"
-                  name="name"
+                  name="Name"
                   required
-                  value={formData.name}
-                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
                   placeholder="Your Name"
+                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                  value={formData.name}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
                 />
               </div>
-
-              <div className="relative">
+              <div>
                 <input
                   type="email"
-                  id="email"
-                  name="email"
+                  name="Email"
                   required
-                  value={formData.email}
-                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
                   placeholder="Your Email"
+                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                  value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
                 />
               </div>
-              <div className="relative">
+              <div>
                 <input
-                  type="text"
-                  id="number"
-                  name="number"
+                  type="number"
+                  name="Number"
                   required
-                  value={formData.number}
-                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
                   placeholder="Your Number"
+                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                  value={formData.number}
                   onChange={(e) =>
                     setFormData({ ...formData, number: e.target.value })
                   }
                 />
               </div>
-
-              <div className="relative">
+              <div>
                 <textarea
-                  id="message"
-                  name="message"
+                  name="Message"
                   required
                   rows={5}
-                  value={formData.message}
-                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
                   placeholder="Your Message"
+                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                  value={formData.message}
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
                 />
               </div>
-
               <button
                 type="submit"
                 className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-3 px-6 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30 hover:-translate-y-1"
@@ -192,6 +177,12 @@ const Contact = () => {
                 Send Message
               </button>
             </form>
+
+            {messageStatus && (
+              <p className="text-center mt-4 text-sm text-green-400">
+                {messageStatus}
+              </p>
+            )}
           </div>
         </RevealOnScroll>
       </div>
