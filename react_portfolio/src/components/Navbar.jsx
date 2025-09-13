@@ -9,7 +9,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <a href="#home" className="font-mono text-xl font-bold text-white">
-            Anit Baranwal<span className="text-blue-500">.tech</span>
+            Anit Baranwal<span className="text-blue-500"></span>
           </a>
           <div
             className="w-7 h-5 relative cursor-pointer z-40 md:hidden"
@@ -20,13 +20,13 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
           <div className="hidden md:flex items-center space-x-8">
             <a
               href="#home"
-              className="text-transparent bg-clip-text bg-blue-500 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:animate-bounce transition-all duration-500 font-semibold text-lg"
+              className="text-transparent bg-clip-text bg-blue-500 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all duration-500 font-semibold text-lg"
             >
               Home
             </a>
             <a
               href="#about"
-              className="text-transparent bg-clip-text bg-blue-500 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:animate-bounce transition-all duration-500 font-semibold text-lg"
+              className="text-transparent bg-clip-text bg-blue-500 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all duration-500 font-semibold text-lg"
             >
               About
             </a>
@@ -38,7 +38,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
             </a> */}
             <a
               href="#projects"
-              className="text-transparent bg-clip-text bg-blue-500 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:animate-bounce transition-all duration-500 font-semibold text-lg"
+              className="text-transparent bg-clip-text bg-blue-500 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all duration-500 font-semibold text-lg"
             >
               Project
             </a>
@@ -51,7 +51,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
             </a> */}
             <a
               href="#contact"
-              className="text-transparent bg-clip-text bg-blue-500 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:animate-bounce transition-all duration-500 font-semibold text-lg"
+              className="text-transparent bg-clip-text bg-blue-500 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all duration-500 font-semibold text-lg"
             >
               Contact
             </a>

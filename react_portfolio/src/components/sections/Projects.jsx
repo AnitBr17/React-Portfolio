@@ -302,9 +302,9 @@ const Projects = () => {
             </div>
           </div>
 
-          <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition w-full mb-6">
+          {/* <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition w-full mb-6">
             <div className="flex flex-col md:flex-row gap-6">
-              {/* Left side image */}
+              
               <div className="w-full md:w-1/2">
                 <img
                   src={Portfolio3}
@@ -313,7 +313,7 @@ const Projects = () => {
                 />
               </div>
 
-              {/* Right side content */}
+        
               <div className="w-full md:w-1/2 flex flex-col justify-between">
                 <div>
                   <h3 className="text-xl font-bold mb-2">
@@ -331,7 +331,7 @@ const Projects = () => {
                   </p>
                 </div>
 
-                {/* Tech stack tags */}
+              
                 <div className="flex flex-wrap justify-center text-center gap-6 mb-4">
                   {["React", "Tailwind CSS", "JavaScript"].map((tech, key) => (
                     <span
@@ -343,7 +343,6 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {/* Links */}
                 <div className="flex flex-wrap justify-center text-center gap-6 mb-4">
                   <a
                     href="https://anitbaranwal.vercel.app/"
@@ -364,7 +363,7 @@ const Projects = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition w-full mb-6">
             <div className="flex flex-col md:flex-row gap-6">
