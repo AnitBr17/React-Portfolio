@@ -18,6 +18,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
             &#9776;
           </div>
           <div className="hidden md:flex items-center space-x-8">
+
             <a
               href="#home"
               className="text-transparent bg-clip-text bg-blue-500 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all duration-500 font-semibold text-lg"
