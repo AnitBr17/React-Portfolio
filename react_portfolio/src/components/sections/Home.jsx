@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import RevealOnScroll from "../RevealOnScroll";
 // Removed invalid import for profile.jpg; use image path directly in <img src="/profile.jpg" />
-import Profile from "/public/profile2.jpg";
+import Profile from "/public/profile.jpg";
 
 const Home = () => {
   const [displayText, setDisplayText] = useState("");
@@ -66,9 +66,9 @@ const Home = () => {
             {/* Profile Picture */}
             <div className="flex-shrink-0 mr-0 md:mr-6 mb-4 md:mt-2">
               <img
-                src="/profile2.jpg"
+                src="/profile.jpg"
                 alt="Anit Baranwal"
-                className="w-48 h-48 md:w-56 md:h-56 rounded-full border-4 border-blue-500 shadow-lg object-contain"
+                className="w-48 h-48 md:w-56 md:h-56 rounded-full border-4 border-blue-500 shadow-lg"
               />
             </div>
 
