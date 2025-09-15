@@ -66,7 +66,7 @@ const Home = () => {
           {/* Profile Picture */}
           <div className="flex-shrink-0 mb-6 md:mb-0">
             <img
-              src="/profile.jpg"
+              src="/profile1.jpg"
               alt="Anit Baranwal"
               className="mt-10 w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-blue-500 shadow-lg object-full mx-auto"
             />
