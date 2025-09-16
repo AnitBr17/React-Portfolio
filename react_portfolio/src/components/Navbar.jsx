@@ -83,7 +83,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
               </button>
             </a> */}
             <a
-              href="https://drive.google.com/file/d/1pu1k7HA7pMOq_su_1IvI7XquFbh2JFhE/view?usp=sharing"
+              href="https://drive.google.com/uc?export=download&id=1pu1k7HA7pMOq_su_1IvI7XquFbh2JFhE"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -109,6 +109,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
                 Resume
               </button>
             </a>
+
           </div>
         </div>
       </div>
